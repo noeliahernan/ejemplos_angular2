@@ -1,0 +1,23 @@
+<form novalidate (ngSubmit)="submit()" #todoForm="ngForm">
+    <div class="input-field col s12">
+
+        <label for="text">Todo</label>
+        <input 
+            type="text"
+            id="text"
+            required
+            name="text"
+            [(ngModel)]="todo"
+        />     
+    </div>
+
+    <div class="col s12">
+        <button
+            type="submit"
+            class="btn waves-effect waves-light input-block-level"
+            style="width: 100%"
+        >
+            Crear todo
+        </button>        
+    </div>        
+</form>    
