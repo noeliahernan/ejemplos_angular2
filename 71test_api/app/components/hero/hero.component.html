@@ -1,0 +1,8 @@
+<ul id="heroes" class="heroes">
+    <li *ngFor="let hero of heroes"  class="hero" (click)="gotoDetail(hero)" >
+        {{ hero.name }}
+    </li>
+</ul>    
+
+<a class="goDashboard" (click)="goDashboard()">Go dashboard</a>
+
