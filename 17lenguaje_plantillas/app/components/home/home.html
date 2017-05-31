@@ -1,0 +1,36 @@
+<div>
+    <p>
+        Número de usuarios: {{ users.length }}
+    </p> 
+
+    <ul [hidden]="!show">
+        <li *ngFor="let user of users; let i = index" (click)="displayUser(user)">
+            Index: {{ i }}, User: {{ user }}
+        </li>    
+    </ul>         
+
+    <div [ngSwitch]="bugType">
+        <p *ngSwitchDefault>Todo bien</p>
+        <p *ngSwitchCase="1">Bug de tipo 1</p>
+        <p *ngSwitchCase="2">Bug de tipo 2</p>
+    </div>     
+
+    <p *ngIf="users.length > 3">Hay más de 3 usuarios</p>
+
+    <input type="text" [disabled]="disabled" />
+
+    <br />
+
+    <div [class.brand]="isBrand">Clases dinámicas</div>
+
+    <br />
+
+    <button [style.color]="isBrand ? 'white' : 'grey'">Estilos dinámicos</button>
+
+    <br />
+
+    <div [ngStyle]="setStyles()">
+        Div afectado por ngStyle
+    </div>    
+
+</div>
