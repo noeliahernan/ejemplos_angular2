@@ -1,0 +1,28 @@
+<div class="col s12">
+    
+    <h1 class="center">Buscador con Angular 2</h1>
+
+    <hr />
+
+    <input type="text" [(ngModel)]="postSearch" />
+
+    <table class="striped centered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Keywords</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts | search: 'title': postSearch">
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>{{ post.keywords }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
